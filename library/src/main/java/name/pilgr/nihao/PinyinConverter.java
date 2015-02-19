@@ -11,22 +11,19 @@ import java.io.RandomAccessFile;
 /**
  * This class is NiHao main interface.
  * there are two methods you can call them to convert the chinese to pinyin.
- * PinyinUtil.toPinyin(Context context,char c);
- * PinyinUtil.toPinyin(Context context,String hanzi);
+ * PinyinConverter.toPinyin(Context context,char c);
+ * PinyinConverter.toPinyin(Context context,String hanzi);
  * <p/>
- * User: Ryan
- * Date: 11-5-29
- * Time: 21:13
  */
 public class PinyinConverter {
 
-    private static final String TAG = "PinyinConverter";
+    private static final String TAG = "NiHao";
 
     private RandomAccessFile mSourceFile = null;
 
     public PinyinConverter(Context context) {
         try {
-            mSourceFile = new RandomAccessFile(PinyinSource.readOrCreateFromFile(context), "r");
+            mSourceFile = new RandomAccessFile(PinyinDb.readOrCreateFromFile(context), "r");
         } catch (FileNotFoundException e) {
             Log.e(TAG, "Couldn't init Pinyin Converter", e);
         }
