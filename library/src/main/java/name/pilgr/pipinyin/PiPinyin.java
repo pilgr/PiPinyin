@@ -48,7 +48,7 @@ public class PiPinyin {
      */
     public String toPinyin(char c) {
         if (c == 0x3007) return "ling";
-        if (c < 4E00 || c > 0x9FA5) {
+        if (c < 0x4E00 || c > 0x9FA5) {
             return "";
         }
         try {
@@ -60,6 +60,11 @@ public class PiPinyin {
         } catch (IOException e) {
             return "";
         }
+    }
+
+    public static boolean isChineseChar(char c) {
+        if (c == 0x3007) return true;
+        return c >= 0x4E00 && c <= 0x9FA5;
     }
 
     /**
@@ -94,7 +99,7 @@ public class PiPinyin {
             String s = pinyinList.get(i);
             if (TextUtils.isEmpty(s)) continue;
 
-            sbShort.append(s.substring(0,1));
+            sbShort.append(s.substring(0, 1));
             if (withSeparator && i < pinyinList.size() - 1) {
                 sbShort.append(separator);
             }
