@@ -5,7 +5,7 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'java-library-distribution'
 
-archivesBaseName='nihao'
+archivesBaseName='pipinyin'
 version = '0.9'
 ext.packaging = 'jar'
 

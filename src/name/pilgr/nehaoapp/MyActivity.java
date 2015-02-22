@@ -18,9 +18,8 @@ package name.pilgr.nehaoapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
-import name.pilgr.nihao.PinyinConverter;
+import name.pilgr.pipinyin.PiPinyin;
 
 /**
  * this is a demo activity for PiPinyin library
@@ -40,9 +39,9 @@ public class MyActivity extends Activity {
         setContentView(R.layout.main);
         TextView textView = (TextView) findViewById(R.id.demotext);
         TextView textView1 = (TextView) findViewById(R.id.demotext1);
-        final PinyinConverter pinyinConverter = new PinyinConverter(this);
-        textView.setText(pinyinConverter.toPinyin("这是一个测试", " "));
-        textView1.setText(String.valueOf(pinyinConverter.toPinyin('我')));
-        pinyinConverter.recycle();
+        final PiPinyin piPinyin = new PiPinyin(this);
+        textView.setText(piPinyin.toPinyin("这是一个测试", " "));
+        textView1.setText(String.valueOf(piPinyin.toPinyin('我')));
+        piPinyin.recycle();
     }
 }

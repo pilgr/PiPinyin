@@ -1,4 +1,4 @@
-package name.pilgr.nihao;
+package name.pilgr.pipinyin;
 
 import android.content.Context;
 
