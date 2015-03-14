@@ -47,6 +47,9 @@ public class PiPinyin {
      * @return pinyin string
      */
     public String toPinyin(char c) {
+        if (mSourceFile == null) {
+            return "";
+        }
         if (c == 0x3007) return "ling";
         if (c < 0x4E00 || c > 0x9FA5) {
             return "";
