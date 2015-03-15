@@ -5,6 +5,10 @@ PiPinyin is a simple android library supporting convertion between Chinese chara
 
 Originally based on [pinyin4android][1]
 
+Download jar
+----------
+Latest version [0.9.1][2]
+
 How to use
 ----------
 ```java
@@ -41,3 +45,4 @@ License
 
 
  [1]: https://code.google.com/p/pinyin4android/
+ [2]: https://github.com/pilgr/PiPinyin/releases/download/0.9.1/pipinyin-0.9.1.jar
