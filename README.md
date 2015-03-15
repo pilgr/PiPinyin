@@ -15,6 +15,12 @@ piPinyin.toPinyin('我');
 piPinyin.recycle();
 ```
 
+How to build jar
+----------
+```bash
+./gradlew clean jar
+```
+
 License
 -------
 
